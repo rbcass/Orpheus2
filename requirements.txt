@@ -1,0 +1,11 @@
+tensorflow
+datetime
+fluidsynth
+numpy
+pathlib
+pandas
+keras
+pretty_midi
+music21
+seaborn
+midi2audio

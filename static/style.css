@@ -1,0 +1,443 @@
+@font-face {
+  font-family: 'Chancery';
+  src: url('static/BLKCHCRY.ttf') format('truetype');
+}
+
+body {
+  margin: 0; 
+  font-family: Arial, sans-serif;
+  background-color: beige;
+  overflow: hidden;
+  font-family: 'Chancery', serif;
+  /* background: url(beige.gif);
+  background-repeat: no-repeat;
+  background-size: cover; */
+   background-color: rgb(210,180,140);
+
+}
+
+.container {
+  width: 90%; 
+  margin: 50px auto;
+  background-color: #f5f5f5;
+  background: url(white.gif);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 600px;
+}
+
+header {
+  background-color: #000;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+nav {
+  width: 100%;
+  padding: 10px 40px;
+  background-color: beige;
+  background-color: #f8daa583;
+  box-shadow: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 40px;
+  display: flex;
+  
+}
+
+nav li {
+  margin-right: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 2.5vh;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d61414;
+}
+
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 160vh; 
+}
+
+/* Added styles for the midi-player-box class */
+.midi-player-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  border-radius: 5px; 
+  background-color: #f8f8f8; 
+  height: 300px;
+}
+
+.right {
+width: 40px; 
+height: 40px; 
+margin-left: auto;
+margin-right: 10px; 
+transition: 0.3s ease;
+}
+
+.right:hover{
+color: #d61414;
+}
+
+
+
+/*Button*/
+.button-49,
+.button-49:after {
+  cursor: pointer;
+  width: 20px;
+  height: 30px;
+  position: relative;
+  /* line-height: 78px; */
+  /* left: 70px; */
+  font-size: 19px;
+  font-family: 'Chancery', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #d61010 5%);
+  border: 0;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  /* position: relative; */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'Orpheus';
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #f6bd00 5%, #e60f0f 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+  opacity: 1;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 120px;
+    height: 60px;
+    line-height: 30px;
+  }
+}
+
+/*Customising the midi-player*/
+midi-player::part(control-panel) {
+  background: rgb(139, 9, 9);
+  border-radius: 0px;
+  font-size: 17px;
+}
+
+
+#myStaffVisualizer {
+margin-left: 28%;
+margin-top: 5%;
+}
+
+#myStaffVisualizerB {
+  /* margin-left: 22%; */
+  margin-left: 50vh;
+  margin-top: 5%;
+  }
+  
+  #myWaterVisualizer{
+    margin-left: 17%;
+  }
+
+
+/*TRYING ALPHATAB THING   SOURCE CODE - https://www.alphatab.net/docs/tutorial-web/player*/
+.at-wrap {
+  width: 90vw;
+  height: 65vh;
+  margin: 0 auto;
+  border: 5px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.at-content {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+
+/** Sidebar **/
+.at-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  max-width: 70px;
+  width: auto;
+  display: flex;
+  align-content: stretch;
+  z-index: 1001;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  background: #2b2929;
+}
+
+.at-sidebar:hover {
+  max-width: 400px;
+  transition: max-width 0.2s;
+  overflow-y: auto;
+}
+
+.at-viewport {
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 70px;
+  right: 0;
+  bottom: 0;
+  padding-right: 20px;
+}
+
+.at-footer {
+  flex: 0 0 auto;
+  background: #436d9d;
+  color: #fff;
+}
+
+
+/** Track selector **/
+.at-track {
+  display: flex;
+  position: relative;
+  padding: 10px;
+  transition: background 0.2s;
+  cursor: pointer;
+  margin: 150px;
+}
+
+.at-track:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.at-track>.at-track-icon,
+.at-track>.at-track-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.at-track>.at-track-icon {
+  flex-shrink: 0;
+  font-size: 32px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  width: 64px;
+  height: 64px;
+  margin-right: 5px;
+  align-items: center;
+}
+
+.at-track-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.at-track:hover>.at-track-icon {
+  opacity: 0.8;
+}
+
+.at-track.active {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.at-track.active>.at-track-icon {
+  color: #cc2d11;
+  opacity: 1;
+}
+
+.at-track>.at-track-name {
+  font-weight: 500;
+}
+
+/** Footer **/
+.at-controls {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(139, 9, 9);
+  font-weight: 300;
+  color: #030303;
+}
+
+.at-controls>div {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.at-controls>div>* {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 4px;
+  margin: 0 3px;
+}
+
+.at-controls .btn {
+  color: #fff;
+  border-radius: 0;
+  height: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.at-controls a.active {
+  background: #8a140c;
+  text-decoration: none;
+}
+
+.at-controls .btn i {
+  vertical-align: top;
+}
+
+.at-controls select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 100%;
+  height: 40px;
+  background: #910d08;
+  padding: 4px 10px;
+  color: #fff;
+  font-size: 16px;
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+  cursor: pointer;
+}
+
+.at-song-title {
+  font-weight: bold;
+}
+
+.button-download-print{
+  background-color: #8a140c;
+  border: none;
+  font-family: 'Chancery', serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+/*Non fab icons*/
