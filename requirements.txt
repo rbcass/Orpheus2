@@ -1,4 +1,5 @@
 tensorflow
+flask
 datetime
 fluidsynth
 numpy
@@ -9,3 +10,4 @@ pretty_midi
 music21
 seaborn
 midi2audio
+python-secrets
