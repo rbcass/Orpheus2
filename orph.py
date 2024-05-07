@@ -324,7 +324,7 @@ def static_file(filename):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
 
 # from google.colab import files
 # files.download(out_file)
