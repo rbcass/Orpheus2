@@ -1,5 +1,6 @@
 tensorflow
 flask
+flask-cors
 datetime
 fluidsynth
 numpy
